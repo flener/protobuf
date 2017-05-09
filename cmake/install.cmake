@@ -15,6 +15,7 @@ foreach(_library
 endforeach()
 
 install(TARGETS protoc EXPORT protobuf-targets
+  BUNDLE DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT protoc
   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT protoc)
 
 file(STRINGS extract_includes.bat.in _extract_strings

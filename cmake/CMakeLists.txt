@@ -161,6 +161,7 @@ include(libprotobuf-lite.cmake)
 include(libprotobuf.cmake)
 include(libprotoc.cmake)
 include(protoc.cmake)
+set_target_properties(protoc PROPERTIES XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "iOS Developer")
 
 if (protobuf_BUILD_TESTS)
   include(tests.cmake)
